@@ -46,21 +46,21 @@ def news_detail(request, id):
                 news=news,
                 name=name,
                 text=text
-
-            related_news = News.objects.filter(
-                category=news.category
-            ).exclude(
-                id=news.id
-            ).order_by('-created_at')[:4]
             )
 
+    related_news = News.objects.filter(
+        category=news.category
+    ).exclude(
+        id=news.id
+    ).order_by('-created_at')[:4]
+
     comments = news.comments.all().order_by('-created_at')
-        
-        return render(request, 'news/detail.html', {
-            'news': news,
-            'comments': comments,
-            'related_news': related_news,
-        })
+
+    return render(request, 'news/detail.html', {
+        'news': news,
+        'comments': comments,
+        'related_news': related_news,
+    })
 
 def category_news(request, category_id):
     news_list = News.objects.filter(
