@@ -28,7 +28,9 @@ ALLOWED_HOSTS = [
     'localhost',
 ]
 
-
+CSRF_TRUSTED_ORIGINS = [
+    'https://news-portal-m2jp.onrender.com',
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
