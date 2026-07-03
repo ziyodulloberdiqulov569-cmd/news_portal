@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-v&mg8gha(v)08n!ea)^%)b3(0@l5+99r0ao#3&_3il_cg4#l4w'
 
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'news-portal-m2jp.onrender.com',
